@@ -31,14 +31,11 @@ const contactLimiter = rateLimit({
 });
 
 // CORS configuration
-const corsOptions = {
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-portfolio-domain.com'] 
-    : ['http://localhost:3000', 'http://localhost:5173'],
-  credentials: true,
-  optionsSuccessStatus: 200
-};
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: 'http://localhost:5173', // or '*' for all, but not recommended for production
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true // optional: if you're using cookies or auth headers
+}));
 
 // Body parsing middleware
 app.use(express.json({ limit: '10mb' }));
