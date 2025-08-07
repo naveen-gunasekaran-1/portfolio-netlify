@@ -11,7 +11,7 @@ const Projects = () => {
     image: 'https://images.pexels.com/photos/12367460/pexels-photo-12367460.jpeg',
     technologies: ['React Native', 'Firebase', 'Node.js', 'Express.js'],
     liveUrl: '#',
-    githubUrl: 'https://github.com/naveen-gunasekaran-1/raahtrack-local-bus-tracking-system  ',
+    githubUrl: 'https://github.com/naveen-gunasekaran-1/raahtrack-local-bus-tracking-system  s',
     featured: true
   },
   {
@@ -20,8 +20,8 @@ const Projects = () => {
     description: 'A project leveraging Mistral7B and HuggingFace Transformers to predict ICD-10 codes from clinical text using deep learning techniques like CNN and RNN.',
     image: 'https://images.pexels.com/photos/7821267/pexels-photo-7821267.jpeg',
     technologies: ['Python', 'PyTorch', 'Transformers', 'Mistral7B', 'Pandas'],
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://naveen-gunasekaran-1.github.io/medical-coding-prototype/',
+    githubUrl: 'https://github.com/naveen-gunasekaran-1/medical-coding-decoding-using-llm',
     featured: true
   },
   {
@@ -29,9 +29,9 @@ const Projects = () => {
     title: 'Stock Market Prediction using ML',
     description: 'Utilized machine learning techniques to forecast stock market trends using historical data and indicators. Visualized results using Matplotlib.',
     image: 'https://images.pexels.com/photos/7947758/pexels-photo-7947758.jpeg',
-    technologies: ['Python', 'Scikit-learn', 'NumPy', 'Pandas', 'Matplotlib'],
-    liveUrl: '#',
-    githubUrl: '#',
+    technologies: ['Python', 'Scikit-learn', 'NumPy', 'Pandas', 'Matplotlib','streamlit'],
+    liveUrl: 'https://bse-stock-predictor-gzp4dlzyhiqedhpsr9x6fx.streamlit.app/',
+    githubUrl: 'https://github.com/naveen-gunasekaran-1/bse-stock-predictor',
     featured: false
   },
   {
@@ -41,7 +41,7 @@ const Projects = () => {
     image: 'https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=800',
     technologies: ['Java', 'MySQL', 'Maven'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/naveen-gunasekaran-1/Faculty-Management-System-java',
     featured: false
   },
   {
@@ -51,7 +51,7 @@ const Projects = () => {
   image: 'https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg?auto=compress&cs=tinysrgb&w=800',
   technologies: ['React', 'Tailwind CSS', 'MongoDB', 'Framer Motion'],
   liveUrl: '#',
-  githubUrl: '#',
+  githubUrl: 'https://github.com/naveen-gunasekaran-1/portfolio-netlify',
   featured: false
 }
 
