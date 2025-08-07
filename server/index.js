@@ -32,7 +32,7 @@ const contactLimiter = rateLimit({
 
 // CORS configuration
 app.use(cors({
-  origin: 'http://localhost:5173', // or '*' for all, but not recommended for production
+  origin: 'https://naveengunasekaran.netlify.app', // or '*' for all, but not recommended for production
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true // optional: if you're using cookies or auth headers
 }));
