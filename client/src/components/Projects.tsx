@@ -11,7 +11,7 @@ const Projects = () => {
     image: 'https://images.pexels.com/photos/12367460/pexels-photo-12367460.jpeg',
     technologies: ['React Native', 'Firebase', 'Node.js', 'Express.js'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/naveen-gunasekaran-1/raahtrack-local-bus-tracking-system  ',
     featured: true
   },
   {
