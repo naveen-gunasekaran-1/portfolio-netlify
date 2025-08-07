@@ -127,30 +127,6 @@ const contactInfo = [
                 </motion.a>
               ))}
             </div>
-
-            {/* Social Links */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              viewport={{ once: true }}
-              className="mt-8"
-            >
-              <h4 className="text-white font-semibold mb-4">Follow Me</h4>
-              <div className="flex space-x-4">
-                {['GitHub', 'LinkedIn', 'Twitter'].map((platform) => (
-                  <motion.a
-                    key={platform}
-                    href="#"
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-red-500 hover:bg-gray-700 transition-all duration-300"
-                  >
-                    {platform.charAt(0)}
-                  </motion.a>
-                ))}
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Contact Form */}
