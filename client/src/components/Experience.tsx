@@ -56,8 +56,12 @@ const education = [
   }
 ];
 const certifications = [
-  'Oracle APEX Cloud Developer Professional – Oracle University (May 2025)'
+  {
+    name: 'Oracle APEX Cloud Developer Professional – Oracle University (May 2025)',
+    link: 'http://catalog-education.oracle.com/ords/certview/sharebadge?id=E19D91E82DBFDDD45D1BC108B71BF6F2B32D1A30CA9DF2232798ADB36CFFC0A0'
+  }
 ];
+
 
   return (
     <section id="experience" className="py-20">
@@ -190,28 +194,41 @@ const certifications = [
 
             {/* Certifications */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  <h4 className="text-xl font-bold text-white mb-6">Certifications</h4>
+  <div className="grid gap-3">
+    {certifications.map((cert, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, x: 20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ delay: index * 0.1, duration: 0.4 }}
+        viewport={{ once: true }}
+        className="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition-colors duration-300"
+      >
+        <div className="flex items-start">
+          <div className="w-2 h-2 bg-red-500 rounded-full mt-1 mr-3"></div>
+          <div>
+            <span className="text-gray-300 font-semibold">{cert.name}</span>
+            <br />
+            <a
+              href={cert.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-blue-400 hover:underline mt-1 block"
             >
-              <h4 className="text-xl font-bold text-white mb-6">Certifications</h4>
-              <div className="grid gap-3">
-                {certifications.map((cert, index) => (
-                  <motion.div
-                    key={cert}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1, duration: 0.4 }}
-                    viewport={{ once: true }}
-                    className="bg-gray-800 p-3 rounded-lg flex items-center hover:bg-gray-700 transition-colors duration-300"
-                  >
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
-                    <span className="text-gray-300">{cert}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+              Check Credential ↗
+            </a>
+          </div>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</motion.div>
           </div>
         </div>
       </div>
