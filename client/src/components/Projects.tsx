@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Image as ImageIcon } from 'lucide-react';
 import raaahtrackImage from '../Assets/raahtrack.png';
-import stockmarketImage from '../Assets/stockmarket.png';
+import stockmarketImage from '../Assets/stockMarket.png';
 import facultymanagementImage from '../Assets/facultyManage.png';
 import portfolioImage from '../Assets/portfolio.png';
 import FH1 from '../Assets/freelancershub/FH-1.png';
@@ -128,7 +128,6 @@ const Projects = () => {
 ];
 
   const featuredProjects = projects.filter(project => project.featured);
-  const otherProjects = projects.filter(project => !project.featured);
 
   const openGallery = (project: Project, index: number = 0) => {
     setSelectedProject(project);
@@ -257,82 +256,6 @@ const Projects = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Other Projects Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">Other Projects</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {otherProjects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-700 transition-all duration-300"
-              >
-                <div className="relative group/img">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  {project.screenshots && project.screenshots.length > 0 && (
-                    <button
-                      onClick={() => openGallery(project)}
-                      className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                    >
-                      <div className="bg-blue-500 text-white p-2 rounded-full">
-                        <ImageIcon size={20} />
-                      </div>
-                    </button>
-                  )}
-                </div>
-                <div className="p-6">
-                  <h4 className="text-lg font-bold text-white mb-2">{project.title}</h4>
-                  <p className="text-gray-400 text-sm mb-4 line-clamp-3">{project.description}</p>
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {project.technologies.slice(0, 3).map((tech) => (
-                      <span
-                        key={tech}
-                        className="bg-red-500/20 text-red-500 px-2 py-1 rounded text-xs"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.technologies.length > 3 && (
-                      <span className="text-gray-500 text-xs px-2 py-1">
-                        +{project.technologies.length - 3} more
-                      </span>
-                    )}
-                  </div>
-                  <div className="flex justify-between">
-                    <a
-                      href={project.liveUrl}
-                      className="text-red-500 hover:text-red-400 text-sm flex items-center gap-1 transition-colors duration-300"
-                    >
-                      <Eye size={14} />
-                      View
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      className="text-gray-400 hover:text-white text-sm flex items-center gap-1 transition-colors duration-300"
-                    >
-                      <Github size={14} />
-                      Code
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
 
         {/* Screenshot Gallery Modal */}
         <AnimatePresence>
